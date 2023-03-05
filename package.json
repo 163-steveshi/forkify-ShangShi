@@ -15,9 +15,7 @@
   },
   "dependencies": {
     "core-js": "^3.25.0",
-    "fracty": "^1.0.11",
-    "git": "^0.1.5",
-    "regenerator-runtime": "^0.13.9",
-    "sass": "^1.54.8"
+    "fractional": "^1.0.11",
+    "regenerator-runtime": "^0.13.9"
   }
 }
