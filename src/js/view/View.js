@@ -57,7 +57,6 @@ export default class View {
   _clear() {
     this._parentElement.innerHTML = '';
   }
-
   //show the loading gear
   renderSpinner() {
     const markup = `<div class="spinner">

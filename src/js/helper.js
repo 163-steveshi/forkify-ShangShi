@@ -1,4 +1,4 @@
-import { async } from 'regenerator-runtime';
+
 import { TIMEOUT_SEC } from './config';
 //safety measure for not crash browser--when load take too long
 const timeout = function (s) {

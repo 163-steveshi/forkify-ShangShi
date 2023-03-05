@@ -7,11 +7,6 @@ import bookmarksView from './view/bookmarksView.js';
 import addRecipeView from './view/addRecipeView.js';
 import { MODAL_CLOSE_SEC } from './config.js';
 
-//for old browser support
-import 'core-js/stable';
-import 'regenerator-runtime/runtime';
-import { async } from 'regenerator-runtime';
-
 ///////////////////////////////////////
 
 //overall function for calling function in recipeView, model for maintaining program flow
