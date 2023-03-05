@@ -1,4 +1,3 @@
-import { mark } from 'regenerator-runtime';
 import icons from 'url:../../img/icons.svg'; //import icon data
 
 export default class View {
@@ -26,6 +25,7 @@ export default class View {
     this._clear();
     this._parentElement.insertAdjacentHTML('afterbegin', markup);
   }
+
   update(data) {
     this._data = data;
     const newMarkup = this._generateMarkup(); //since markup/html link is string so it is hard to compare with original html element so we need to first convert it into a DOM Object then we can modify the original html element for replacing text and achieve update
@@ -57,6 +57,7 @@ export default class View {
   _clear() {
     this._parentElement.innerHTML = '';
   }
+
   //show the loading gear
   renderSpinner() {
     const markup = `<div class="spinner">

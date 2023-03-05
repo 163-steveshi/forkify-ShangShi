@@ -66,7 +66,7 @@ class PaginationView extends View {
           </button>
       `;
 
-    return ''; //not add any button
+    return ''; //not add any button since there is only 1 page
   }
 }
 export default new PaginationView();
