@@ -30,11 +30,7 @@ export const AJAX = async function (url, uploadData = undefined) {
     throw err; //we wants model main part of app handle the err
   }
 };
-export const numberToFraction = function (amount) {
-  // This is a whole number and doesn't need modification.
-  if (parseFloat(amount) === parseInt(amount)) {
-    return amount;
-  }
+
   // Next 12 lines are cribbed from https://stackoverflow.com/a/23575406.
   const gcd = function (a, b) {
     if (b < 0.0000001) {
