@@ -115,7 +115,6 @@ init();
 const clearBookmarks = function () {
   localStorage.clear('bookmarks');
 };
-// clearBookmarks();
 
 //use user input from form and generate a new object
 export const uploadRecipe = async function (newRecipe) {
@@ -150,8 +149,6 @@ export const uploadRecipe = async function (newRecipe) {
     console.log(data);
     state.recipe = createRecipeObject(data);
     addBookmark(state.recipe);
-    // console.log(state.recipe);
-    // console.log(ingredients);
   } catch (err) {
     throw err;
   }

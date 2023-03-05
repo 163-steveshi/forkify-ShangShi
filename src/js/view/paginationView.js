@@ -8,9 +8,9 @@ class PaginationView extends View {
       //find the closest button that triggering the click event
       const btn = e.target.closest('.btn--inline');
       if (!btn) return;
-      // console.log(btn);
+
       const goToPage = Number(btn.dataset.goto);
-      // console.log(goToPage);
+
       handler(goToPage); //return this value with parameter
     });
   }
@@ -18,11 +18,11 @@ class PaginationView extends View {
     //html element hsa duplicate code: can be refactored in the future if I have time:D
     const curPage = this._data.page;
     //first compute page
-    // console.log(this._data.results);
+
     const numPages = Math.ceil(
       this._data.results.length / this._data.resultsPerPage
     );
-    // console.log(numPages);
+
     //Pag1, and there are other page
     if (curPage === 1 && numPages > 1)
       return `<button data-goto="${
@@ -65,7 +65,7 @@ class PaginationView extends View {
             </svg>
           </button>
       `;
-    //'only 1 page'
+
     return ''; //not add any button
   }
 }

@@ -1,6 +1,6 @@
 import View from './View.js';
 import icons from 'url:../../img/icons.svg'; //import icon data
-// import { fracty } from 'fracty'; //import fractional display from npm library
+
 import { numberToFraction } from '../helper.js';
 class RecipeView extends View {
   //select the container that displsay data

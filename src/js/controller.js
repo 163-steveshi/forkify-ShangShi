@@ -6,16 +6,11 @@ import paginationView from './view/paginationView.js';
 import bookmarksView from './view/bookmarksView.js';
 import addRecipeView from './view/addRecipeView.js';
 import { MODAL_CLOSE_SEC } from './config.js';
-// import icons from 'url:../img/icons.svg'; //import img for this js
+
 //for old browser support
 import 'core-js/stable';
 import 'regenerator-runtime/runtime';
 import { async } from 'regenerator-runtime';
-
-// if (module.hot) module.hot.accept();
-// const recipeContainer = document.querySelector('.recipe');
-
-// https://forkify-api.herokuapp.com/v2
 
 ///////////////////////////////////////
 
@@ -24,7 +19,7 @@ const controlRecipe = async function () {
   try {
     //use Recipe ID to load recipe in the Recipe Container from the left recipe  list
     const id = window.location.hash.slice(1); //since id first symbol is #, get rid of it
-    // console.log(id);
+
     if (!id) return; // for handling bug
     recipeView.renderSpinner();
     //update results view to mark selected search result
@@ -37,9 +32,6 @@ const controlRecipe = async function () {
 
     //store data we get from API
     await model.loadRecipe(id);
-    // const { recipe } = model.state;
-
-    // console.log(recipe);
 
     //2 Rendering Recipe
     //display to user
@@ -50,7 +42,6 @@ const controlRecipe = async function () {
     console.error(err);
   }
 };
-// controlRecipe();
 
 const controlSearchResults = async function () {
   try {
@@ -73,7 +64,6 @@ const controlSearchResults = async function () {
   }
 };
 const controlPagination = function (goToPage) {
-  // console.log(goToPage);
   //buttons click and load to the page that parameter define
   resultsView.render(model.getSearchResultsPage(goToPage));
   //4 Render new Pagination Button
@@ -84,7 +74,7 @@ const controlServings = function (newServings) {
   //update the recipe servings (in state)
   model.updateServings(newServings);
   //Update the recipe view
-  // recipeView.render(model.state.recipe);
+
   recipeView.update(model.state.recipe);
 };
 
@@ -93,7 +83,6 @@ const controlAddBookmark = function () {
   if (!model.state.recipe.bookmarked) model.addBookmark(model.state.recipe);
   else model.deleteBookmark(model.state.recipe.id);
 
-  // console.log(model.state.recipe);
   //2 update recipe view
   recipeView.update(model.state.recipe);
   //3.render bookmarks
